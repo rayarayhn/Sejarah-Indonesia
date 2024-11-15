@@ -1,0 +1,161 @@
+/* Header dengan Background Foto */
+.header {
+    background-image: url('img/budaya.jpg'); /* Ganti dengan path gambar kamu */
+    background-size: cover;
+    background-position: center center;
+    color: white; /* Warna default teks */
+    text-align: center;
+    padding: 50px 0;
+}
+
+.header h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Menambahkan bayangan pada teks */
+}
+
+/* Gaya untuk kata "Budaya" */
+.budaya {
+    color: red; /* Warna merah untuk "Budaya" */
+}
+
+/* Gaya untuk kata "Indonesia" */
+.indonesia {
+    color: white; /* Warna putih untuk "Indonesia" */
+}
+
+
+/* Efek fade pada body */
+body {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Ketika halaman dimuat atau menu diklik, beri waktu untuk memudar */
+body.loaded {
+    opacity: 1;
+}
+
+/* Efek fade pada konten utama dan footer */
+.main-content, .footer, .navbar {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.main-content.loaded, .footer.loaded, .navbar.loaded {
+    opacity: 1;
+}
+
+
+
+
+/* CSS untuk Menambahkan Efek Hover pada Menu */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navigasi */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #ff6347; /* Warna latar belakang saat hover */
+    color: white; /* Warna teks saat hover */
+    border-radius: 5px; /* Sudut melengkung */
+}
+
+
+/* Header */
+.header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Konten */
+.main-content {
+    padding: 20px;
+}
+
+.intro {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.highlight-cultures {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.culture-item {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.culture-image {
+    width: 100%;
+    height: auto;
+}
+
+.culture-text {
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.culture-text h3 {
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 10px;
+}
+
+.culture-text p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

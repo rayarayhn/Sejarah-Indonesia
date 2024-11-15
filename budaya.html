@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budaya - Indonesia</title>
+    <link rel="stylesheet" href="budaya.css">
+</head>
+<body>
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="beranda.html">Beranda</a></li>
+            <li><a href="budaya.html">Budaya</a></li>
+            <li><a href="Kuliner.html">Kuliner</a></li>
+            <li><a href="Sejarah.html">Sejarah</a></li>
+            <li><a href="Wisata.html">Wisata</a></li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <h1><span class="budaya">Budaya</span> <span class="indonesia">Indonesia</span></h1>
+    </header>
+    
+
+    <main class="main-content">
+        <section class="intro">
+            <h2>Keanekaragaman Budaya Indonesia</h2>
+            <p>Indonesia memiliki keanekaragaman budaya yang luar biasa, yang berasal dari lebih dari 300 kelompok etnis. Setiap daerah memiliki tradisi, bahasa, dan kesenian yang unik, menciptakan harmoni budaya yang mempesona. Berikut adalah beberapa budaya yang paling terkenal di Indonesia:</p>
+        </section>
+
+        <section class="highlight-cultures">
+            <h2>Budaya Terkenal Indonesia</h2>
+            <div class="culture-item">
+                <img src="img/tarikecak.jpg" alt="Tari Bali" class="culture-image">
+                <div class="culture-text">
+                    <h3>Tari Kecak (Bali)</h3>
+                    <p>Tari Kecak adalah tarian tradisional Bali yang dikenal dengan ritual dramatis dan melibatkan puluhan penari pria yang membentuk lingkaran dan mengucapkan "cak" secara bersamaan. Tarian ini menggambarkan kisah Ramayana.</p>
+                </div>
+            </div>
+            <div class="culture-item">
+                <img src="img/pakaian.jpg" alt="Pakaian Adat" class="culture-image">
+                <div class="culture-text">
+                    <h3>Pakaian Adat Indonesia</h3>
+                    <p>Pakaian adat Indonesia sangat beragam, dengan setiap daerah memiliki pakaian tradisionalnya sendiri. Salah satunya adalah pakaian adat dari Sumatera Barat, yaitu pakaian Minangkabau yang khas dengan ornamen emas dan kain songket.</p>
+                </div>
+            </div>
+            <div class="culture-item">
+                <img src="img/gamelan.jpg" alt="Gamelan" class="culture-image">
+                <div class="culture-text">
+                    <h3>Gamelan (Jawa)</h3>
+                    <p>Gamelan adalah alat musik tradisional yang digunakan dalam pertunjukan seni di Bali, Jawa, dan Lombok. Alat musik ini terdiri dari berbagai instrumen seperti gong, xilofon, dan drum yang menghasilkan suara harmonis dan khas.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; Raya Rayhan 2024.</p>
+    </footer>
+    <script>
+        // Fungsi untuk menambahkan efek fade ketika menu diklik
+        document.querySelectorAll('.navbar a').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();  // Mencegah default aksi klik (navigasi langsung)
+                
+                // Menghapus kelas 'loaded' untuk efek fade-out
+                document.body.classList.remove('loaded');
+                document.querySelector('.main-content').classList.remove('loaded');
+                document.querySelector('.footer').classList.remove('loaded');
+                document.querySelector('.navbar').classList.remove('loaded');
+                
+                // Menunggu beberapa waktu sebelum menavigasi ke halaman baru
+                setTimeout(function() {
+                    window.location = link.href;  // Pindah ke halaman yang dituju
+                }, 1000); // Tunggu 1 detik sebelum pindah ke halaman
+            });
+        });
+    
+        // Menambahkan kelas 'loaded' setelah halaman sepenuhnya dimuat
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+            document.querySelector('.main-content').classList.add('loaded');
+            document.querySelector('.footer').classList.add('loaded');
+            document.querySelector('.navbar').classList.add('loaded');
+        });
+    </script>
+    
+</body>
+</html>

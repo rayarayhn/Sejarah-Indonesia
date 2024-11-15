@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sejarah - Indonesia</title>
+    <link rel="stylesheet" href="sejarah.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="beranda.html">Beranda</a></li>
+            <li><a href="budaya.html">Budaya</a></li>
+            <li><a href="kuliner.html">Kuliner</a></li>
+            <li><a href="sejarah.html">Sejarah</a></li>
+            <li><a href="Wisata.html">Wisata</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <h1><span class="sejarah">Sejarah</span> <span class="indonesia">Indonesia</span></h1>
+    </header>
+
+    <!-- Konten Halaman Sejarah -->
+    <main class="main-content">
+        <section class="intro">
+            <h2>Sejarah Indonesia</h2>
+            <p>Indonesia memiliki sejarah panjang yang melibatkan peradaban kuno, kolonialisme, dan perjuangan untuk kemerdekaan. Berikut adalah beberapa peristiwa penting dalam sejarah Indonesia:</p>
+        </section>
+
+        <section class="highlight-events">
+            <h2>Peristiwa Penting</h2>
+            <div class="event-item">
+                <img src="img/proklamasi.jpg" alt="Proklamasi" class="event-image">
+                <div class="event-text">
+                    <h3>Proklamasi Kemerdekaan</h3>
+                    <p>Pada tanggal 17 Agustus 1945, Indonesia memproklamasikan kemerdekaannya dari penjajahan Belanda dan Jepang. Momen ini menjadi tonggak sejarah bagi bangsa Indonesia.</p>
+                </div>
+            </div>
+            <div class="event-item">
+                <img src="img/candi.jpg" alt="Candi Borobudur" class="event-image">
+                <div class="event-text">
+                    <h3>Peradaban Kuno</h3>
+                    <p>Candi Borobudur adalah peninggalan peradaban Buddha di Indonesia yang dibangun pada abad ke-9. Struktur ini adalah bukti kemajuan teknologi dan spiritual masa lalu.</p>
+                </div>
+            </div>
+            <div class="event-item">
+                <img src="img/sumpahpemuda.jpg" alt="Sumpah Pemuda" class="event-image">
+                <div class="event-text">
+                    <h3>Sumpah Pemuda</h3>
+                    <p>Pada tanggal 28 Oktober 1928, para pemuda Indonesia bersumpah untuk bersatu sebagai bangsa, bahasa, dan tanah air yang satu, yaitu Indonesia.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; Raya Rayhan 2024.</p>
+    </footer>
+
+    <script>
+        // Efek fade-in saat halaman dimuat
+        window.addEventListener('load', function () {
+            document.body.classList.add('loaded');
+            document.querySelector('.main-content').classList.add('loaded');
+        });
+
+        // Efek fade-out saat menu diklik
+        document.querySelectorAll('.navbar a').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // Mencegah navigasi langsung
+                document.body.classList.remove('loaded'); // Efek fade-out
+
+                setTimeout(function () {
+                    window.location = link.href; // Navigasi setelah efek selesai
+                }, 1000); // Waktu transisi 1 detik
+            });
+        });
+    </script>
+</body>
+</html>

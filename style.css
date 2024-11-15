@@ -1,0 +1,111 @@
+table {
+    width: 100%; /* Lebar tabel 100% */
+    border-collapse: collapse; /* Menyatukan garis batas */
+    margin: 0 auto; /* Menyusun tabel di tengah */
+    border: 2px solid black;
+}
+
+td {
+    padding: 50px;
+    border: 1px solid gray;
+}
+
+.menu-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    line-height: 1.8; /* Jarak antar baris teks */
+}
+
+.menu-list li {
+    margin-bottom: 10px; /* Jarak antar item */
+    padding: 5px; /* Jarak dalam item */
+}
+
+
+
+
+.title-image {
+    width: 300px; /* Lebar gambar */
+    height: auto; /* Menjaga rasio gambar */
+    margin-top: 10px; /* Jarak antara teks dan gambar */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
+
+/* Mengatur ukuran teks pada link */
+.menu-link {
+    font-size: 30px; /* Mengubah ukuran teks */
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Hover: Mengubah warna dan ukuran teks saat pointer berada di atas link */
+.menu-link:hover {
+    color: #007bff;
+    transform: scale(1.1); /* Perbesar teks sedikit */
+}
+
+/* Active: Animasi saat link diklik */
+.menu-link:active {
+    transform: scale(0.9); /* Perkecil teks sedikit saat diklik */
+    color: #0056b3;
+}
+
+/* Efek tambahan menggunakan keyframes untuk lebih kompleks */
+@keyframes click-effect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Menerapkan animasi keyframes saat diklik */
+.menu-link:active {
+    animation: click-effect 0.2s ease;
+}
+
+ol {
+    padding-left: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 10px; /* Jarak antar item */
+}
+
+.menu-link {
+    display: inline-block;
+    font-size: 25px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s ease, color 0.2s ease;
+    padding: 5px 0; /* Memberi jarak pada link */
+}
+
+
+
+
+img {
+    max-width: 100%; /* Gambar akan menyesuaikan lebar kolom */
+    height: auto;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 36px;  /* Memperbesar ukuran teks h2 */
+    color: #333;      /* Menentukan warna teks */
+}
+
+p {
+    font-size: 25px;  /* Memperbesar ukuran teks paragraf */
+    line-height: 1.6; /* Menambah jarak antar baris agar lebih mudah dibaca */
+    color: #444;      /* Menentukan warna teks */
+}

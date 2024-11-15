@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Indonesia</title>
+    <link rel="stylesheet" href="beranda.css">
+</head>
+<body>
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="beranda.html">Beranda</a></li>
+            <li><a href="Budaya.html">Budaya</a></li>
+            <li><a href="Kuliner.html">Kuliner</a></li>
+            <li><a href="Sejarah.html">Sejarah</a></li>
+            <li><a href="Wisata.html">Wisata</a></li>
+        </ul>
+    </nav>
+
+    <!-- Konten Halaman -->
+    <header class="header">
+        <h1>Beranda - Informasi Tentang Indonesia</h1>
+    </header>
+    <main class="main-content">
+        <section class="intro">
+            <h2>Selamat Datang di Beranda</h2>
+            <p>Indonesia, negeri yang terletak di garis khatulistiwa, merupakan salah satu negara dengan keanekaragaman budaya, alam, dan sejarah yang luar biasa. Terdiri dari lebih dari 17.000 pulau, Indonesia menawarkan keindahan alam yang menakjubkan, mulai dari pantai tropis, pegunungan yang megah, hingga hutan hujan yang lebat.</p>
+        </section>
+
+        <section class="highlights">
+            <h2>Fakta Menarik Tentang Indonesia</h2>
+            <ul>
+                <li>Indonesia adalah negara kepulauan terbesar di dunia.</li>
+                <li>Memiliki lebih dari 300 kelompok etnis dengan budaya unik.</li>
+                <li>Pulau Komodo adalah rumah bagi komodo, kadal terbesar di dunia.</li>
+                <li>Candi Borobudur di Jawa Tengah merupakan candi Buddha terbesar di dunia.</li>
+                <li>Bali adalah salah satu destinasi wisata terkenal di dunia.</li>
+            </ul>
+        </section>
+
+        <section class="image-gallery">
+            <h2>Keindahan Indonesia</h2>
+            <img src="img/candi.jpg" alt="Candi Borobudur" class="image">
+            <img src="img/pantai.jpg" alt="Pantai di Bali" class="image">
+            <img src="img/komodo.jpg" alt="Komodo di Pulau Komodo" class="image">
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; Raya Rayhan 2024.</p>
+    </footer>
+</body>
+</html>
+<script>
+    // Tambahkan efek transisi saat mengklik menu
+    document.querySelectorAll('.navbar a').forEach(link => {
+        link.addEventListener('click', event => {
+            // Mencegah aksi bawaan klik
+            event.preventDefault();
+
+            // Tambahkan efek fade-out
+            document.body.style.transition = 'opacity 0.5s ease';
+            document.body.style.opacity = '0';
+
+            // Arahkan ke halaman yang dituju setelah animasi selesai
+            setTimeout(() => {
+                window.location.href = link.href;
+            }, 500);
+        });
+    });
+</script>
+

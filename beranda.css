@@ -1,0 +1,140 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Navigasi */
+.navbar {
+    background-color: #007BFF;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #0056b3; /* Ubah warna latar saat hover */
+    transform: scale(1.1); /* Membesarkan ukuran */
+    color: #ff0000; /* Ubah warna teks */
+}
+
+/* Efek klik */
+.navbar a:active {
+    transform: scale(0.9); /* Sedikit mengecilkan saat diklik */
+    background-color: #003d80; /* Warna lebih gelap saat klik */
+}
+
+
+/* Header */
+.header {
+    background-image: url('img/backround.jpg');
+    background-size: cover; /* Menutupi seluruh area header */
+    background-position: center center; /* Menjaga posisi gambar tetap di tengah */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    color: white; /* Teks putih agar kontras dengan latar belakang */
+    text-align: center;
+    padding: 100px 0;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: center; /* Menjaga teks di tengah secara horizontal */
+    align-items: flex-start; /* Menempatkan teks di atas (menggeser ke atas) */
+    background-image: url('img/backround.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: black;
+    height: 500px; /* Atur tinggi header sesuai kebutuhan */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Teks di dalam header */
+.header h1 {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+
+/* Main Content */
+.main-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.intro h2 {
+    color: #007BFF;
+    font-size: 1.8em;
+}
+
+.intro p {
+    text-align: justify;
+}
+
+.highlights h2 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+.highlights ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.highlights li {
+    margin-bottom: 8px;
+}
+
+.image-gallery h2 {
+    color: #007BFF;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 0.9em;
+}

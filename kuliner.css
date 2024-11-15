@@ -1,0 +1,110 @@
+/* Efek fade untuk body */
+body {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+/* Styling navbar */
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: red;
+    color: white;
+}
+
+/* Header */
+.header {
+    background-image: url('img/kuliner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+}
+
+.header h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+.header .kuliner {
+    color: red;
+}
+
+.header .indonesia {
+    color: white;
+}
+
+/* Konten utama */
+.main-content {
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.main-content.loaded {
+    opacity: 1;
+}
+
+.highlight-dishes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dish-item {
+    max-width: 300px;
+    text-align: center;
+}
+
+.dish-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.dish-text h3 {
+    margin: 10px 0 5px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.dish-text p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}

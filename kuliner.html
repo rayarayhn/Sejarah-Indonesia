@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuliner - Indonesia</title>
+    <link rel="stylesheet" href="kuliner.css">
+</head>
+<body>
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="beranda.html">Beranda</a></li>
+            <li><a href="budaya.html">Budaya</a></li>
+            <li><a href="kuliner.html">Kuliner</a></li>
+            <li><a href="Sejarah.html">Sejarah</a></li>
+            <li><a href="Wisata.html">Wisata</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <h1><span class="kuliner">Kuliner</span> <span class="indonesia">Indonesia</span></h1>
+    </header>
+
+    <!-- Konten Halaman Kuliner -->
+    <main class="main-content">
+        <section class="intro">
+            <h2>Keanekaragaman Kuliner Indonesia</h2>
+            <p>Indonesia terkenal dengan kekayaan kulinernya yang mencerminkan keberagaman budaya dan tradisi. Dari Sabang hingga Merauke, setiap daerah memiliki makanan khas yang unik dan lezat.</p>
+        </section>
+
+        <section class="highlight-dishes">
+            <h2>Kuliner Khas Indonesia</h2>
+            <div class="dish-item">
+                <img src="img/rendang.jpg" alt="Rendang" class="dish-image">
+                <div class="dish-text">
+                    <h3>Rendang (Sumatera Barat)</h3>
+                    <p>Rendang adalah masakan khas Minangkabau yang terbuat dari daging sapi, dimasak dengan santan, rempah-rempah, dan dimasak hingga kering. Masakan ini dinobatkan sebagai salah satu makanan terenak di dunia.</p>
+                </div>
+            </div>
+            <div class="dish-item">
+                <img src="img/sate.jpg" alt="Sate" class="dish-image">
+                <div class="dish-text">
+                    <h3>Sate (Jawa)</h3>
+                    <p>Sate adalah potongan daging kecil yang ditusuk, dibakar, dan disajikan dengan saus kacang atau bumbu kecap. Hidangan ini sangat populer di seluruh Indonesia.</p>
+                </div>
+            </div>
+            <div class="dish-item">
+                <img src="img/nasigoreng.jpg" alt="Nasi Goreng" class="dish-image">
+                <div class="dish-text">
+                    <h3>Nasi Goreng</h3>
+                    <p>Nasi Goreng adalah nasi yang digoreng dengan campuran bumbu khas Indonesia, telur, ayam, dan sayuran. Hidangan ini sering menjadi menu favorit baik di rumah maupun restoran.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; Raya Rayhan 2024.</p>
+    </footer>
+
+    <script>
+        // Efek fade-in saat halaman dimuat
+        window.addEventListener('load', function () {
+            document.body.classList.add('loaded');
+            document.querySelector('.main-content').classList.add('loaded');
+        });
+
+        // Efek fade-out saat menu diklik
+        document.querySelectorAll('.navbar a').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // Mencegah navigasi langsung
+                document.body.classList.remove('loaded'); // Efek fade-out
+
+                setTimeout(function () {
+                    window.location = link.href; // Navigasi setelah efek selesai
+                }, 1000); // Waktu transisi 1 detik
+            });
+        });
+    </script>
+</body>
+</html>

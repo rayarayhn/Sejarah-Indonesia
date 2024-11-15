@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata - Indonesia</title>
+    <link rel="stylesheet" href="wisata.css">
+    <style>
+    
+    </style>
+</head>
+<body>
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="beranda.html">Beranda</a></li>
+            <li><a href="budaya.html">Budaya</a></li>
+            <li><a href="kuliner.html">Kuliner</a></li>
+            <li><a href="sejarah.html">Sejarah</a></li>
+            <li><a href="wisata.html">Wisata</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <h1><span class="wisata">Wisata</span> <span class="indonesia">Indonesia</span></h1>
+    </header>
+
+    <!-- Konten Halaman Wisata -->
+    <main class="main-content">
+        <section class="intro">
+            <h2>Destinasi Wisata Indonesia</h2>
+            <p>Indonesia adalah surga wisata dengan berbagai destinasi menakjubkan, mulai dari pantai tropis hingga pegunungan yang indah. Berikut adalah beberapa tempat wisata terkenal di Indonesia:</p>
+        </section>
+
+        <section class="highlight-destinations">
+            <div class="destination-item">
+                <img src="img/pantaikutai.png" alt="Pantai di Bali" class="destination-image">
+                <div class="destination-text">
+                    <h3>Pantai Kuta, Bali</h3>
+                    <p>Pantai Kuta adalah salah satu destinasi wisata paling populer di Bali, terkenal dengan pasir putih dan pemandangan matahari terbenam yang memukau.</p>
+                </div>
+            </div>
+            <div class="destination-item">
+                <img src="img/rajaampat.png" alt="Raja Ampat" class="destination-image">
+                <div class="destination-text">
+                    <h3>Raja Ampat, Papua</h3>
+                    <p>Raja Ampat adalah surga bagi pecinta bawah laut, menawarkan keindahan terumbu karang yang mempesona dan keanekaragaman hayati laut yang luar biasa.</p>
+                </div>
+            </div>
+            <div class="destination-item">
+                <img src="img/bromo.jpg" alt="Gunung Bromo" class="destination-image">
+                <div class="destination-text">
+                    <h3>Gunung Bromo, Jawa Timur</h3>
+                    <p>Gunung Bromo adalah salah satu gunung berapi paling terkenal di Indonesia, menawarkan pemandangan matahari terbit yang spektakuler.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; Raya Rayhan 2024.</p>
+    </footer>
+
+    <script>
+        // Efek fade-in saat halaman dimuat
+        window.addEventListener('load', function () {
+            document.body.classList.add('loaded');
+            document.querySelector('.main-content').classList.add('loaded');
+        });
+
+        // Efek fade-out saat menu diklik
+        document.querySelectorAll('.navbar a').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault(); // Mencegah navigasi langsung
+                document.body.classList.remove('loaded'); // Efek fade-out
+
+                setTimeout(function () {
+                    window.location = link.href; // Navigasi setelah efek selesai
+                }, 1000); // Waktu transisi 1 detik
+            });
+        });
+    </script>
+</body>
+</html>
